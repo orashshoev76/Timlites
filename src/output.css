@@ -41,7 +41,6 @@
     --spacing: 0.25rem;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -196,6 +195,7 @@
   }
 }
 @layer utilities {
+
   .absolute {
     position: absolute;
   }
@@ -249,9 +249,6 @@
   .mt-\[3\%\] {
     margin-top: 3%;
   }
-  .mt-\[30\%\] {
-    margin-top: 30%;
-  }
   .mb-\[1\%\] {
     margin-bottom: 1%;
   }
@@ -288,9 +285,6 @@
   .mb-\[30px\] {
     margin-bottom: 30px;
   }
-  .ml-\[10\%\] {
-    margin-left: 10%;
-  }
   .ml-\[25\%\] {
     margin-left: 25%;
   }
@@ -324,9 +318,6 @@
   .h-\[60vh\] {
     height: 60vh;
   }
-  .h-\[65vh\] {
-    height: 65vh;
-  }
   .h-\[75vh\] {
     height: 75vh;
   }
@@ -346,6 +337,9 @@
     width: 34%;
   .w-\[33\%\] {
     width: 33%;
+  }
+  .w-\[90\%\] {
+    width: 90%;
   }
   .w-\[35\%\] {
     width: 35%;
@@ -434,6 +428,7 @@
   .justify-evenly {
     justify-content: space-evenly;
   }
+
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
@@ -456,9 +451,6 @@
   }
   .gap-\[35\%\] {
     gap: 35%;
-  }
-  .gap-\[40px\] {
-    gap: 40px;
   }
   .gap-\[50px\] {
     gap: 50px;
@@ -525,9 +517,6 @@
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
-  }
-  .rounded-\[10px\] {
-    border-radius: 10px;
   }
   .rounded-\[12px\] {
     border-radius: 12px;
@@ -619,12 +608,6 @@
     padding-top: 2%;
   .p-\[50px\] {
     padding: 50px;
-  }
-  .p-\[50px_40px\] {
-    padding: 50px 40px;
-  }
-  .p-\[50px_\] {
-    padding: 50px ;
   }
   .pt-\[3\%\] {
     padding-top: 3%;
@@ -945,12 +928,6 @@
   .text-\[30px\] {
     font-size: 30px;
   }
-  .text-\[40px\] {
-    font-size: 40px;
-  }
-  .text-\[50px\] {
-    font-size: 50px;
-  }
   .text-\[70px\] {
     font-size: 70px;
   }
@@ -958,16 +935,9 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .font-extrabold {
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
-  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
-  }
-  .text-\[3\] {
-    color: 3;
   }
   .text-\[blacke\] {
     color: blacke;
@@ -1026,19 +996,9 @@
       width: 60%;
     }
   }
-  .xl\:w-\[80\$\] {
-    @media (width >= 410px) {
-      width: 80$;
-    }
-  }
   .xl\:w-\[80\%\] {
     @media (width >= 410px) {
       width: 80%;
-    }
-  }
-  .xl\:w-\[80\] {
-    @media (width >= 410px) {
-      width: 80;
     }
   }
   .xl\:w-\[100\%\] {
@@ -1061,13 +1021,6 @@
       align-items: center;
     }
   }
-  .xl\:xl\:items-center {
-    @media (width >= 410px) {
-      @media (width >= 410px) {
-        align-items: center;
-      }
-    }
-  }
   .xl\:justify-around {
     @media (width >= 410px) {
       justify-content: space-around;
@@ -1076,11 +1029,6 @@
   .xl\:justify-center {
     @media (width >= 410px) {
       justify-content: center;
-    }
-  }
-  .xl\:justify-evenly {
-    @media (width >= 410px) {
-      justify-content: space-evenly;
     }
   }
   .xl\:overflow-auto {
@@ -1098,29 +1046,14 @@
       text-align: left;
     }
   }
-  .xl\:text-start {
-    @media (width >= 410px) {
-      text-align: start;
-    }
-  }
   .lg\:m-0 {
     @media (width >= 700px) {
       margin: calc(var(--spacing) * 0);
     }
   }
-  .lg\:mr-\[10\%\] {
-    @media (width >= 700px) {
-      margin-right: 10%;
-    }
-  }
   .lg\:mb-\[22px\] {
     @media (width >= 700px) {
       margin-bottom: 22px;
-    }
-  }
-  .lg\:ml-\[0\%\] {
-    @media (width >= 700px) {
-      margin-left: 0%;
     }
   }
   .lg\:ml-\[8\%\] {
@@ -1141,11 +1074,6 @@
   .lg\:h-\[12vh\] {
     @media (width >= 700px) {
       height: 12vh;
-    }
-  }
-  .lg\:h-\[60vh\] {
-    @media (width >= 700px) {
-      height: 60vh;
     }
   }
   .lg\:h-\[100vh\] {
@@ -1173,11 +1101,6 @@
       width: 100%;
     }
   }
-  .lg\:w-\[100\] {
-    @media (width >= 700px) {
-      width: 100;
-    }
-  }
   .lg\:flex-col {
     @media (width >= 700px) {
       flex-direction: column;
@@ -1203,11 +1126,6 @@
       justify-content: space-around;
     }
   }
-  .lg\:justify-between {
-    @media (width >= 700px) {
-      justify-content: space-between;
-    }
-  }
   .lg\:justify-center {
     @media (width >= 700px) {
       justify-content: center;
@@ -1228,43 +1146,14 @@
       gap: 5%;
     }
   }
-  .lg\:gap-\[5\] {
-    @media (width >= 700px) {
-      gap: 5;
-    }
-  }
   .lg\:gap-\[22px\] {
     @media (width >= 700px) {
       gap: 22px;
     }
   }
-  .lg\:gap-\[80px\] {
-    @media (width >= 700px) {
-      gap: 80px;
-    }
-  }
-  .lg\:lg\:gap-\[20px\] {
-    @media (width >= 700px) {
-      @media (width >= 700px) {
-        gap: 20px;
-      }
-    }
-  }
-  .lg\:lg\:gap-\[80px\] {
-    @media (width >= 700px) {
-      @media (width >= 700px) {
-        gap: 80px;
-      }
-    }
-  }
   .lg\:overflow-hidden {
     @media (width >= 700px) {
       overflow: hidden;
-    }
-  }
-  .lg\:text-center {
-    @media (width >= 700px) {
-      text-align: center;
     }
   }
   .lg\:text-start {
@@ -1282,45 +1171,9 @@
       font-size: 40px;
     }
   }
-  .lg\:text-\[45px\] {
-    @media (width >= 700px) {
-      font-size: 45px;
-    }
-  }
-  .lg\:text-\[65px\] {
-    @media (width >= 700px) {
-      font-size: 65px;
-    }
-  }
   .lg\:text-\[85px\] {
     @media (width >= 700px) {
       font-size: 85px;
-    }
-  }
-  .lg\:text-\[30\] {
-    @media (width >= 700px) {
-      color: 30;
-    }
-  }
-  .xl\:lg\:ml-\[10\%\] {
-    @media (width >= 410px) {
-      @media (width >= 700px) {
-        margin-left: 10%;
-      }
-    }
-  }
-  .xl\:lg\:w-\[90\%\] {
-    @media (width >= 410px) {
-      @media (width >= 700px) {
-        width: 90%;
-      }
-    }
-  }
-  .xl\:lg\:items-start {
-    @media (width >= 410px) {
-      @media (width >= 700px) {
-        align-items: flex-start;
-      }
     }
   }
 }
